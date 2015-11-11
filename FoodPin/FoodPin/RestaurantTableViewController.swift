@@ -25,10 +25,13 @@ class RestaurantTableViewController: UITableViewController,NSFetchedResultsContr
         })
     }
     
+ 
+    
     func updateSearchResultsForSearchController(searchController: UISearchController) {
         if var textToSearch = sc.searchBar.text {
-            //去除搜索字符串中的空格
+            //去除搜索字符串左右和中间的空格
             textToSearch = textToSearch.stringByTrimmingCharactersInSet(NSCharacterSet.whitespaceCharacterSet())
+
             searchFilter(textToSearch)
             tableView.reloadData()
         }

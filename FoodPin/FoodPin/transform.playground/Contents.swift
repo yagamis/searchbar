@@ -28,9 +28,11 @@ let 搜索结果 = 餐馆类型.filter { (shop) -> Bool in
     return 匹配 != nil
 }
 
-"早餐 & 早午餐".containsString("&")
+var b = "早餐 & 早午餐 ".stringByTrimmingCharactersInSet(NSCharacterSet.whitespaceCharacterSet())
 
-let a = "aaa"
+
+
+let a = "早餐 & 早午餐 ".componentsSeparatedByCharactersInSet(.whitespaceCharacterSet()).joinWithSeparator("")
 
 
 
